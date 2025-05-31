@@ -102,33 +102,3 @@ CLOUDINARY_CLOUDNAME=your_cloud_name
 CLOUDINARY_APIKEY=your_api_key
 CLOUDINARY_APISECRET=your_api_secret
 
-### 4. Running the Application
-Backend Server
-
-cd server
-npm run dev
-
-Frontend Dev Server
-
-cd client
-npm run dev
-
-### 5.🖼 Image Upload Instructions
-Inside server, create the following folders:
-
-mkdir -p public/temp
-Images are first saved to public/temp/, then uploaded to Cloudinary via backend API.
-
-🧪 Prerequisites
-* Node.js (v18.x or above)
-* Git
-* Supabase account
-* Cloudinary account
-* Chrome / Edge browser
-
-🤝 Contributing
-We welcome contributions! Feel free to open issues or submit pull requests for improvements or bug fixes.
-
-📄 License
-This project is licensed under the MIT License.
-
