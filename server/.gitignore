@@ -1,0 +1,5 @@
+node_modules
+public/temp/
+src/keys/
+.env
+public/temp

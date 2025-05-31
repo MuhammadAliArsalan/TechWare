@@ -1,0 +1,203 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 54, 93, 0.96); /* Matches your dashboard background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+  }
+  
+  .loading-spinner {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .spinner-chart {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spinner-bar {
+    position: absolute;
+    width: 20px;
+    border-radius: 4px;
+    background: linear-gradient(to top, rgba(24, 161, 148, 0.7), rgb(24, 161, 148));
+    bottom: 60px;
+    transform-origin: center 60px;
+    animation: bar-height 1.5s ease-in-out infinite;
+  }
+  
+  .bar1 {
+    height: 40px;
+    left: 50px;
+    animation-delay: 0s;
+  }
+  
+  .bar2 {
+    height: 60px;
+    left: 50px;
+    transform: rotate(90deg);
+    animation-delay: 0.375s;
+  }
+  
+  .bar3 {
+    height: 30px;
+    left: 50px;
+    transform: rotate(180deg);
+    animation-delay: 0.75s;
+  }
+  
+  .bar4 {
+    height: 50px;
+    left: 50px;
+    transform: rotate(270deg);
+    animation-delay: 1.125s;
+  }
+  
+  @keyframes bar-height {
+    0%, 100% {
+      height: 30px;
+    }
+    50% {
+      height: 60px;
+    }
+  }
+  
+  .spinner-pie {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(120deg, #4299e1, #3182ce);
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  
+  .loading-text {
+    color: rgb(24, 161, 148);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    animation: fade 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .loading-progress {
+    width: 250px;
+    margin-top: 0.5rem;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-value {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, pink, transparent);
+    animation: progress 1.5s ease infinite;
+  }
+  
+  @keyframes progress {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .spinner-chart {
+      width: 90px;
+      height: 90px;
+    }
+    
+    .spinner-bar {
+      width: 15px;
+      bottom: 45px;
+      transform-origin: center 45px;
+    }
+    
+    .bar1 {
+      left: 37.5px;
+    }
+    
+    .bar2 {
+      left: 37.5px;
+    }
+    
+    .bar3 {
+      left: 37.5px;
+    }
+    
+    .bar4 {
+      left: 37.5px;
+    }
+    
+    .spinner-pie {
+      width: 30px;
+      height: 30px;
+      top: 30px;
+      left: 30px;
+    }
+    
+    .loading-text {
+      font-size: 1.2rem;
+    }
+    
+    .loading-progress {
+      width: 200px;
+    }
+  }

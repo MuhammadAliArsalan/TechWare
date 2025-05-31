@@ -1,0 +1,269 @@
+/* CategoryCatalog.css */
+.category-catalog {
+  height: 100%;
+  width: 100%;
+  background-color: #52667E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.category-header {
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.condition-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.condition-selector button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D9D9D9;
+  color: #52667E;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.condition-selector button.active {
+  background-color: #52667E;
+  color: white;
+  border: 1px solid white;
+}
+
+.condition-selector button:hover {
+  transform: translateY(-2px);
+}
+
+.no-products {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Reuse the same styles as catalog.css for product cards */
+.catalog_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.product_card {
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  height: 400px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.product_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c0b7b7;
+  height: 20%;
+}
+
+.product_body {
+  height: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro_image {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.pro_image img {
+  width: 100%;
+  height: 90%;
+}
+
+.product_title {
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #c0b7b7;
+}
+
+.product_price {
+  width: 30%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 0px 0px 2px 2px;
+  border-style: solid;
+  border-color: #c0b7b7;
+}
+
+.button {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  border-width: 4px 0px 0px 0px;
+  border-style: solid;
+  border-color: #c0b7b7;
+}
+
+.show_rating {
+  margin: 0;
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog_review_stars {
+  color: #f9d71c;
+  margin-right: 10px;
+}
+
+.add_to_cart {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_to_cart_button {
+  width: 170px;
+  height: 40%;
+  border: 2px solid #52667ea9;
+  border-radius: 20px;
+  padding: 3px 0px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #52667e9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .category-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .product_card {
+    width: 40%;
+  }
+  
+  .pro_image img {
+    width: 90%;
+    height: auto;
+  }
+  
+  .add_to_cart_button {
+    height: 35px;
+    width: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Add these to your existing catalog.css file */
+
+.category-title {
+text-align: center;
+color: #F3E9DC;
+font-size: 28px;
+margin-top: 20px;
+margin-bottom: 20px;
+font-weight: 600;
+width: 100%;
+}
+
+.secondhand_button {
+padding: 12px 20px;
+background-color: #394b5d;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+
+.secondhand_button:hover {
+background-color: #283745;
+}
+
+.no-products {
+width: 100%;
+text-align: center;
+color: #F3E9DC;
+font-size: 20px;
+margin-top: 50px;
+}
+
+.loading, .error {
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #52667E;
+color: #F3E9DC;
+font-size: 22px;
+}
+
+.error {
+color: #ff6b6b;
+}
+
+/* Mobile responsiveness for category title */
+@media (max-width: 600px) {
+.category-title {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.secondhand_button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+}

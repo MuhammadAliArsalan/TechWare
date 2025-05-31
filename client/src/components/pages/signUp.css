@@ -1,0 +1,271 @@
+.form-container h1, .overlay-container h1 {
+    all: unset;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sign_button {
+    border-radius: 5px;
+    border: 1px solid #52677d;
+    background-color: #52677d;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 90ms ease-in;
+    margin: 40px 0;
+    width: 200px;
+}
+
+.sign_button:active {
+    transform: scale(0.95);
+}
+
+.sign_button:focus {
+    outline: none;
+}
+
+.sign_button:hover {
+    transform: scale(0.95);
+}
+
+.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+/* Fixing navbar issue by ensuring the form is below the navbar */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  } */
+
+.sign_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* margin: 0;
+    padding: 0; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D1CFC9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; */
+
+    background-color: #D1CFC9;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 550px;
+}
+
+.form-container {
+    padding: 20px 20px;
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.form-container input {
+    box-sizing: border-box;    
+    background-color: #e6dfdf;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 75% !important;
+    border-radius: 5px !important;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.sign-in-container {
+    left:0;
+    width: 50%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* opacity: 1;
+    z-index: 5; */
+    pointer-events: auto;
+}
+
+.sign_container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sign_container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+    pointer-events: auto;
+}
+
+/* Dropdown Styling */
+.dropdown_label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Styled Dropdown */
+  .styled-dropdown {
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e6dfdf;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 75%;
+  }
+  
+  /* Hover Effect */
+  .styled-dropdown:hover {
+    border-color: #888;
+  }
+  
+  /* Focus Effect */
+  .styled-dropdown:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(121, 125, 129, 0.5);
+  }
+  
+  /* Options Styling */
+  .styled-dropdown option {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .styled-dropdown option:hover {
+    background-color: #888;
+  }
+
+/* Overlay container to handle the sliding effect */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+/* Overlay that contains the two panels */
+.overlay {
+    background: linear-gradient(to right, #1C2E4A, #52677d);
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.8s ease-out;
+}
+
+.overlay h4 {
+    all: unset;
+    font-size: 18px;
+}
+
+.overlay p {
+    all: unset;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Overlay panels */
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    padding: 0 0 0 0;
+}
+
+/* Left panel (Hello, Friend!) */
+.overlay-left {
+    transform: translateX(-20%);
+    padding: 0 40px 0 40px;
+}
+
+/* Right panel (Welcome Back) */
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+    padding:0 40px 0 40px;
+}
+
+/* When right-panel-active is added */
+.sign_container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.sign_container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.sign_container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.sign_container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+/* Button styling inside overlay */
+.ghost {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.ghost:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,56 @@
+.product-ratings-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .product-ratings-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .product-ratings-table th,
+  .product-ratings-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .product-ratings-table th {
+    font-weight: 600;
+    color: #374151;
+    background-color: #f9fafb;
+  }
+  
+  .product-ratings-table tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .rating-cell {
+    min-width: 160px;
+  }
+  
+  .star-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 1rem;
+    color: #d1d5db;
+  }
+  
+  .star.filled {
+    color: #f59e0b;
+  }
+  
+  .rating-number {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .no-data {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem 0;
+  }

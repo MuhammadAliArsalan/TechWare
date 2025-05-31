@@ -1,0 +1,423 @@
+.admin-analytics-container {
+    padding: 40px;
+    padding-top: 40px; 
+    padding-left: 260px; 
+    width: 100%;
+    max-width: 1500px;
+    background-color: rgb(219, 238, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto; 
+    margin-right: auto;
+
+}
+
+.analytics-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: rgb(24, 161, 148);
+}
+
+.header-icon {
+    margin-right: 15px;
+    color: rgb(24, 161, 148);
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+.admin-analytics-container h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin: 10px 0;
+    background: linear-gradient(45deg, #ec907f, rgb(24, 161, 148));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stats-summary {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card svg {
+    color: rgb(24, 161, 148);
+    margin-right: 15px;
+}
+
+.stat-content {
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    margin: 0;
+    color: rgb(24, 161, 148);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0;
+    color: #333;
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    padding-left: 140px; 
+}
+
+.chart-toggle-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.chart-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.chart-toggle-btn.active {
+    background: rgb(24, 161, 148);
+    box-shadow: 0 4px 8px #e59f93;
+}
+
+.chart-toggle-btn svg {
+    margin-right: 5px;
+}
+
+.chart-container {
+    padding-left: 140px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: calc(100% - 20px); 
+}
+
+.chart-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #FF9F1C, #e59f93, rgb(24, 161, 148));
+}
+
+.chart-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.chart-wrapper {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    max-height: 350px !important;
+    object-fit: contain;
+}
+
+.fun-fact-box {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.fun-fact-box svg {
+    color: rgb(24, 161, 148);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.fun-fact-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.fun-fact-header {
+    font-weight: bold;
+    color: rgb(24, 161, 148);
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: rgb(24, 161, 148);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.error-message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.retry-button {
+    margin-top: 20px;
+    background: #df8d7f;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    background: #ff3385;
+    transform: scale(1.05);
+}
+
+.animated {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.chart-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(24, 161, 148);
+    top: -10px;
+    animation: confetti-fall 4s ease-in-out forwards;
+    z-index: 1;
+}
+
+.confetti:nth-child(4n) {
+    background: rgb(24, 161, 148);
+    width: 8px;
+    height: 8px;
+}
+
+.confetti:nth-child(4n+1) {
+    background: #3A86FF;
+    width: 12px;
+    height: 12px;
+}
+
+.confetti:nth-child(4n+2) {
+    background: #8338EC;
+    width: 7px;
+    height: 7px;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .stats-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chart-card {
+        width: 95%;
+        max-width: 400px;
+    }
+    
+    .admin-analytics-container h2 {
+        font-size: 26px;
+    }
+    
+    .fun-fact-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .fun-fact-box svg {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.revenue-summary {
+    margin-bottom: 25px;
+    padding-top: 30px;
+    padding-left: 120px;
+  }
+  
+  .revenue-card {
+    
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .revenue-card h3 {
+    color: rgb(24, 161, 148);
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+  }
+  
+  .revenue-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .revenue-stat {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 100px;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 14px;
+    color: #e59f93;
+    margin-bottom: 5px;
+  }
+  
+  .stat-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e59f93;
+  }

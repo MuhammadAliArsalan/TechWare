@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+/* * {margin:0; padding: 0; box-sizing: border-box;}
+html {overflow-x: hidden;}
+img{user-select: none;}
+body {overflow-x: hidden; position: relative; font-family: 'Montserrat',sans-serif; height:100%;}
+a{display:inline-block;}
+.heading-style-2{position:relative; color:#FFF; font-size: 50px; font-weight: 900; line-height: 50px; margin-bottom: 40px;}
+p{color:#FFF; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 400; line-height: 35px; margin-bottom: 28px;} */
+
+/* logo */
+.logo {margin-bottom: 100px; width: 50%;}
+.logo a{margin-bottom: 20px;}
+.logo img{width:271px; height: auto;}
+.slider-main{min-height: 700px; background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.29%); display: flex; justify-content: space-between; padding-top: 150px; /*align-items: center; */height: 100%; overflow: hidden; position: relative; z-index: 1;}
+#backgrounds{position: absolute; width:100%; height:100%; top:0; z-index:-1;}
+.background{position: absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 2s ease-in-out;}
+.container{position:relative; left:calc(50% - (1140px/2)); width:50%; display: flex; flex-wrap: wrap; justify-content: center; /*padding-block:100px;*/ max-width:525px; height:100%;}
+
+/* content */
+.slider-content-wrap{display:flex; flex-direction:column; /*justify-content:center;*/ height:100%; padding-top: 100px;}
+.slider-content h2,h3{all: unset; font-size: 40px; font-weight: bold;}
+.image-description{position:absolute; opacity:0; transition:opacity 2s ease-in-out; font-size: 40px; font-weight: bold;}
+/*social media */
+.social-icons{display:flex; align-items:center; gap:16px;}
+.social-icons a{border:2px solid #fff; border-radius:50%; width:45px; height:45px; display:inline-block; display:flex; justify-content:center; align-items:center;}
+.social-icons img{width:35px; height:auto; object-fit:contain;}
+
+/* images */
+
+.slider-images > img.next{
+    opacity: 1;
+    transition: 2s;
+    filter: blur(35px);
+    left: 100%;
+    top: 10%;
+    transform: translate(-50%, -50%) scale(0.3);
+}
+.slider-images > img.active{
+    opacity: 1;
+    transform: scale(1);
+    transition: 2s;
+    filter: blur(0px);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.slider-images > img.previous {
+    opacity: 1;
+    transition: 2s;
+    filter: blur(25px);
+    left: 95%;
+    top: 90%;
+}
+.slider-images > img.inactive{
+    opacity: 0;
+    transition: 2s;
+    filter: blur(35px);
+    left: 100%;
+    top: 100%;
+    transform: translate(10%, 10%) scale(0.3);
+}
+.slider-images{position: relative; width: 45%; height: 100%; top: 0; left:10%; padding-top: 400px; padding-left: 100px;}
+.slider-images img {height: 70%; width: auto;}
+.slider-images > img {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    filter: blur(25px);
+    transform: translate(-50%, -50%) scale(0.3);
+    transition: opacity 3s;
+    object-fit: cover;
+    max-width: 593px;
+    max-height: 779px;
+    height: 50%;
+    min-height: 320px;
+}
+
+/* =============== Media Query ======== */
+/* @media screen and (max-width: 1199px) {
+    .logo a img{width:210px}
+} */
+
+/* Company Section */
+.company-logos{display:flex; flex-direction:column; justify-content:center; align-items: center; height:100%;}
+.company-content {min-height: 150px; width: 100%; background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.29%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 50px;}
+.companies{background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.29%); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 80px; padding: 50px 170px;}
+.company{width: 80px; height: 80px; border: 2px solid #000; border-radius: 50%; display: inline-block; display: flex; justify-content: center; align-items: center;}
+
+/* Why Us? Section */
+  
+/* .why-us {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #52667E;
+    width: 100%;
+    height: auto;
+}
+
+.why-container {
+    width: 70%;
+    /* display: grid; 
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.why-box {
+    background: #D9D9D9;
+    padding: 20px;
+    margin: 2px 6px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgb(28, 32, 37);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.top_div {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bottom_div {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.box1 {
+    width: 40%;
+}
+.box2 {
+    width: 20%;
+    height: 100px;
+}
+h2 {
+    all: unset;
+}
+.why-heading {
+    width: 35%;
+    font-size: 40px;
+    font-weight: bold;
+}
+.box3 {
+    width: 25%;
+    height: 50px;
+}
+.box4 {
+    width: 20%;
+    height: 150px;
+}
+.box5 {
+    width: 60%;
+    height: 80px;
+}
+/* Animations for different directions 
+.fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+.fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+}
+.fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+}
+.fade-in-bottom {
+    animation: fadeInBottom 1s ease-out forwards;
+}
+
+/* Keyframes for Animations 
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInTop {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInBottom {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* WHY US SECTION - ENHANCED */
+/* WHY US SECTION - VISIBLE BOXES VERSION */
+.why-us {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #02304b 0%, #023b5c 100%);
+  }
+  
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .why-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  .main-feature {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+  }
+  
+  .icon-container {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feature-box h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .counter-animation {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 10px;
+  }
+  
+  /* Animations */
+  .pulse-dot {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .new-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #FF5252;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  
+  .sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  
+  .sparkle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: sparkle 2s infinite;
+  }
+  
+  .sparkle:nth-child(2) {
+    top: 70%;
+    left: 80%;
+    animation: sparkle 2s 0.5s infinite;
+  }
+  
+  .sparkle:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    animation: sparkle 2s 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes sparkle {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+  
+  /* Entrance animations */
+  .fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+  
+  .fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+  }
+  
+  .fade-in-bottom {
+    animation: fadeInBottom 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInTop {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInBottom {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .why-heading {
+      font-size: 2rem;
+    }
+    
+    .feature-box {
+      min-height: 200px;
+      padding: 20px;
+    }
+  }
+  
+  /* Box size variations */
+  .large-box {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 320px;
+  }
+  
+  .tall-box {
+    min-height: 300px;
+  }
+  
+  .wide-box {
+    grid-column: span 1;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .large-box,
+    .tall-box,
+    .wide-box {
+      grid-column: span 1;
+      min-height: 250px;
+    }
+  }
+
+  .icon-container {
+    margin-bottom: 20px;
+    height: 150px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-container svg {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover .icon-container svg {
+    transform: scale(1.1);
+  }

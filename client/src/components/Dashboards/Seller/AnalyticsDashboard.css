@@ -1,0 +1,353 @@
+
+.analytics-body {
+    background-color: rgb(219, 238, 243);
+    min-height: 100vh;
+    padding-bottom: 2.5rem;
+    width: 100%;
+}
+
+.analytics-container {
+
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    color: rgb(24, 161, 148);
+    margin: 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgb(24, 161, 148);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    justify-content: space-between;
+}
+
+/* StatCard Enhancement */
+/* .stat-card {
+    background: linear-gradient(145deg, #ffffff, #f9fafc);
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    overflow: hidden;
+} */
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
+}
+
+.stat-card .stat-title {
+    font-size: 0.875rem;
+    color: rgb(24, 161, 148);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.charts-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: stretch; /* Make all cards the same height */
+}
+.chart-card.full-width {
+    flex-basis: 100%;
+}
+.chart-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 0.5rem; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+  }
+.chart-card canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    margin: 0 auto;
+    display: block; /* This helps with centering */
+}
+.chart-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    width: 100%; /* Ensure full width */
+}
+
+.chart-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card h3 {
+    font-size: 1.25rem;
+    color: rgb(12, 112, 102);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 600;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.period-selector {
+    display: flex;
+    background-color: #edf2f7;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.period-selector button {
+    border: none;
+    background: none;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #4a5568;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.period-selector button:hover {
+    background-color: #e2e8f0;
+    color: #1a365d;
+}
+
+.period-selector button.active {
+    background-color: rgb(24, 161, 148);
+    color: white;
+    font-weight: 600;
+}
+
+.rating-summary {
+    overflow: hidden;
+}
+
+.rating-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rating-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+}
+
+.rating-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgb(24, 161, 148);
+    line-height: 1;
+}
+
+.rating-stars {
+    margin: 0.75rem 0;
+}
+
+.star {
+    font-size: 1.75rem;
+    color: #e2e8f0;
+    margin: 0 0.125rem;
+}
+
+.star.filled {
+    color: #f6ad55;
+}
+
+.review-count {
+    font-size: 0.875rem;
+    color: rgb(24, 161, 148);
+    margin-top: 0.25rem;
+}
+
+.rating-bars {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.rating-bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.rating-bar-item span:first-child {
+    width: 70px;
+    font-size: 0.875rem;
+    color: rgb(21, 129, 119);
+    font-weight: 500;
+}
+
+.rating-bar-item span:last-child {
+    width: 45px;
+    text-align: right;
+    font-size: 0.875rem;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.rating-bar-container {
+    flex: 1;
+    background-color: #edf2f7;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 0.75rem;
+    overflow: hidden;
+}
+
+.rating-bar {
+    height: 100%;
+    background: linear-gradient(90deg, rgb(24, 161, 148), #ed8936);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.table-section {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.table-section h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-section {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    .chart-card {
+        min-height: 300px;
+    }
+
+    .dashboard-title {
+        font-size: 1.75rem;
+    }
+    
+    .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .period-selector {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .period-selector button {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.chart-card.pie-chart canvas,
+.chart-card.doughnut-chart canvas {
+    max-height: 100px;
+}
+
+.chart-card.bar-chart canvas,
+.chart-card.line-chart canvas {
+    max-height: 300px;
+}
+
+.chart-card:hover .chart-canvas {
+    filter: brightness(1.02);
+}
