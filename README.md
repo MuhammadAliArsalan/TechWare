@@ -55,10 +55,10 @@ TechWare is a full-scale e-commerce solution tailored for the computer hardware 
 
 ## 🔧 Installation Instructions
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/CSsamrah/Ecommerce-project.git
+git clone https://github.com/MuhammadAliArsalan/TechWare.git
 cd Ecommerce-project
 
 ### 2. Install Dependencies
