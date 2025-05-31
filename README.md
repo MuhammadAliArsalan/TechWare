@@ -102,3 +102,45 @@ CLOUDINARY_CLOUDNAME=your_cloud_name
 CLOUDINARY_APIKEY=your_api_key
 CLOUDINARY_APISECRET=your_api_secret
 
+---
+
+#4. Running the Application
+##Backend Server:
+
+cd server
+npm run dev
+Backend will be available at http://localhost:3000
+
+##Frontend Development Server:
+
+cd client
+npm run dev
+Frontend will be available at http://localhost:5173
+
+---
+
+
+5. 🖼 Image Upload Instructions
+Inside the server directory, create the following folders:
+
+mkdir -p public/temp
+Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary via the backend API.
+
+---
+
+#🧪 Prerequisites
+Node.js (v18.x or above)
+Git
+Supabase account
+Cloudinary account
+Modern Browser (Chrome or Edge recommended)
+
+---
+
+# 🤝 Contributing
+We welcome contributions! Feel free to open issues or submit pull requests for improvements or bug fixes.
+
+---
+
+# 📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
