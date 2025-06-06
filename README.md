@@ -144,7 +144,7 @@ Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary 
 
 ## 🎥 Demo Video
 
-[![Watch Demo](https://img.youtube.com/vi/9TKwx6vw1K0/0.jpg)](https://youtu.be/9TKwx6vw1K0)
+[![Watch Demo](https://youtu.be/Zvgs5ObJIF8)
 
 
 
