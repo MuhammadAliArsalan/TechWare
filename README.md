@@ -134,8 +134,13 @@ Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary 
 * Cloudinary account
 * Modern browser (Chrome or Edge recommended)
 
-## 🤝 Contributing
-We welcome contributions! Feel free to open issues or submit pull requests for improvements or bug fixes.
+## 🙌 Contributors
+
+- [Muhammad Ali Arsalan](https://github.com/MuhammadAliArsalan)
+- [Samrah Fatima](https://github.com/CSsamrah)
+- [Areesha Rehan](https://github.com/areesha7)
+- [Haiqa Fatima](https://github.com/GHaiqa)
+
 
 
 
