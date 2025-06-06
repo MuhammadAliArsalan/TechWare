@@ -1,7 +1,7 @@
 
 # 💻 TechWare – E-Commerce Platform for Computer Hardware
 
-TechWare is a full-scale e-commerce solution tailored for the computer hardware domain. It serves a wide range of users including individuals, resellers, small businesses, and corporate IT teams.
+TechWare is a full-scale e-commerce solution tailored for the computer hardware domain. This web application was developed as semester project for our Ecommerce course. It aims to serve a wide range of users including individuals, resellers, small businesses, and corporate IT teams.
 
 ---
 
@@ -142,6 +142,9 @@ Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary 
 - [Haiqa Fatima](https://github.com/GHaiqa)
 
 
+## 🎥 Demo Video
+
+[![Watch Demo](https://img.youtube.com/vi/9TKwx6vw1K0/0.jpg)](https://youtu.be/9TKwx6vw1K0)
 
 
 
