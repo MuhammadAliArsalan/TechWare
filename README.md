@@ -48,99 +48,26 @@ TechWare is a full-scale e-commerce solution tailored for the computer hardware 
 
 ---
 
-## 📁 Project Structure
-
-
----
 
 ## 🔧 Installation Instructions
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/MuhammadAliArsalan/TechWare.git
 cd Ecommerce-project
+## 1. Clone the Repository
+
 
 ### 2. Install Dependencies
 ### Backend
 
+```bash
 cd server
 npm install
 
 ### Frontend
+```bash
 cd ../client
 npm install
 
-### 3. Environment Setup
-Create a .env file in the server directory with the following keys:
-
-# App
-PORT=3000
-NODE_ENV=development
-
-# Supabase PostgreSQL
-SUPABASE_URL=your_supabase_project_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-PG_USER=your_postgres_user
-PG_PASSWORD=your_postgres_password
-PG_HOST=your_postgres_host
-PG_PORT=your_postgres_port
-PG_DATABASE=your_database_name
-
-# JWT Secrets
-ACCESS_TOKEN_SECRET=your_access_token_secret
-REFRESH_TOKEN_SECRET=your_refresh_token_secret
-
-# Nodemailer (SMTP)
-NODEMAIL_HOST=your_smtp_host
-NODEMAIL_USER=your_email
-NODEMAIL_PASS=your_email_password
-NODEMAIL_PORT=587
-
-# Cloudinary
-CLOUDINARY_CLOUDNAME=your_cloud_name
-CLOUDINARY_APIKEY=your_api_key
-CLOUDINARY_APISECRET=your_api_secret
-
----
-
-#4. Running the Application
-##Backend Server:
-
-cd server
-npm run dev
-Backend will be available at http://localhost:3000
-
-##Frontend Development Server:
-
-cd client
-npm run dev
-Frontend will be available at http://localhost:5173
-
----
-
-
-5. 🖼 Image Upload Instructions
-Inside the server directory, create the following folders:
-
-mkdir -p public/temp
-Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary via the backend API.
-
----
-
-#🧪 Prerequisites
-Node.js (v18.x or above)
-Git
-Supabase account
-Cloudinary account
-Modern Browser (Chrome or Edge recommended)
-
----
-
-# 🤝 Contributing
-We welcome contributions! Feel free to open issues or submit pull requests for improvements or bug fixes.
-
----
-
-# 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
