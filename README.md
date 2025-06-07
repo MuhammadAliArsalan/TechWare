@@ -136,10 +136,11 @@ Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary 
 
 ## 🙌 Contributors
 
-- [Muhammad Ali Arsalan](https://github.com/MuhammadAliArsalan)
-- [Samrah Fatima](https://github.com/CSsamrah)
-- [Areesha Rehan](https://github.com/areesha7)
-- [Haiqa Fatima](https://github.com/GHaiqa)
+- [Muhammad Ali Arsalan](https://github.com/MuhammadAliArsalan) – Backend Developer  
+- [Samrah Fatima](https://github.com/CSsamrah) – Backend Developer  
+- [Areesha Rehan](https://github.com/areesha7) – Frontend Developer  
+- [Haiqa Fatima](https://github.com/GHaiqa) – Frontend Developer
+
 
 
 ## 🎥 Demo Video
