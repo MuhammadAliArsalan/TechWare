@@ -5,6 +5,12 @@ TechWare is a full-scale e-commerce solution tailored for the computer hardware 
 
 ---
 
+## 🎥 Demo Video
+
+[![Watch Demo]](https://www.youtube.com/watch?v=Zvgs5ObJIF8)
+
+---
+
 ## 🚀 Features
 
 - **🛍 Comprehensive Product Catalog**
@@ -136,16 +142,14 @@ Uploaded images are first saved to public/temp/ and then uploaded to Cloudinary 
 
 ## 🙌 Contributors
 
-- [Muhammad Ali Arsalan](https://github.com/MuhammadAliArsalan) – Backend Developer  
+- [Muhammad Ali Arsalan](https://github.com/MuhammadAliArsalan) – FullStack Developer  
 - [Samrah Fatima](https://github.com/CSsamrah) – Backend Developer  
 - [Areesha Rehan](https://github.com/areesha7) – Frontend Developer  
 - [Haiqa Fatima](https://github.com/GHaiqa) – Frontend Developer
 
 
 
-## 🎥 Demo Video
 
-[![Watch Demo]](https://www.youtube.com/watch?v=Zvgs5ObJIF8)
 
 
 
